@@ -9,7 +9,7 @@ const youtubedl = require('youtube-dl')
 const osmosis = require('osmosis');
 const search = require('youtube-search');
 
-const bot = new Telegraf('2014561680:AAELO7sNu219NZdFFQZnpBKx5RnKB-t8chI');
+const bot = new Telegraf('your_api_key');
 
 bot.start((ctx) => ctx.reply('Welcome'))
 bot.help((ctx) => ctx.reply('Send me a sticker'))
@@ -25,7 +25,7 @@ bot.on('message',  async ctx =>{
             result.map(async title=>{
                 let opts = {
                     maxResults: 1,
-                    key: 'AIzaSyATQD748FZIsAN-tL1W-lWuoKqeESlV4k0'
+                    key: 'yt_api_key'
                 };
                 search(title.Song, opts, (err, results) => {
                     if(err) return console.log(err);
